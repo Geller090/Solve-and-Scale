@@ -34,7 +34,8 @@
                 <h2>CONTACT US</h2>
                 <p>Fill out the form below and we'll get back to you within 24 hours.</p>
                 
-                <form id="contactForm">
+                <!-- Direct form submission to Google Apps Script -->
+                <form id="contactForm" action="https://script.google.com/macros/s/AKfycbyOaWjDqJXAxeoPi8l-B86xzHMYggVWXL9A1AT4AdNcaIqwS5ko9lVeBSAs1cgY-Gk/exec" method="POST" target="hidden-iframe">
                     <div class="form-group">
                         <label for="name">Full Name*</label>
                         <input type="text" id="name" name="name" required>
@@ -67,6 +68,9 @@
                     
                     <div id="formStatus" class="form-status"></div>
                 </form>
+                
+                <!-- Hidden iframe to receive the form results -->
+                <iframe name="hidden-iframe" id="hidden-iframe" style="display:none"></iframe>
             </div>
             
             <div class="contact-info">

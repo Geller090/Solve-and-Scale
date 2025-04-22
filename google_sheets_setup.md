@@ -24,7 +24,15 @@ Follow these steps to connect your contact form to Google Sheets for form data c
 const sheetName = 'Sheet1';
 const scriptProps = PropertiesService.getScriptProperties();
 
+function doGet(e) {
+  return handleResponse(e);
+}
+
 function doPost(e) {
+  return handleResponse(e);
+}
+
+function handleResponse(e) {
   const lock = LockService.getScriptLock();
   lock.tryLock(10000);
   
@@ -41,15 +49,42 @@ function doPost(e) {
     
     sheet.getRange(nextRow, 1, 1, newRow.length).setValues([newRow]);
     
-    return ContentService
-      .createTextOutput(JSON.stringify({ 'result': 'success', 'row': nextRow }))
-      .setMimeType(ContentService.MimeType.JSON);
+    // Return HTML page with success message
+    return HtmlService.createHtmlOutput(
+      `<html>
+        <head>
+          <style>
+            body { font-family: Arial, sans-serif; text-align: center; padding: 40px; }
+            .success { color: #2f855a; }
+          </style>
+        </head>
+        <body>
+          <h2 class="success">Form submitted successfully!</h2>
+          <p>Your contact information has been received.</p>
+          <p>You can close this window now.</p>
+        </body>
+      </html>`
+    );
   }
   
-  catch(e) {
-    return ContentService
-      .createTextOutput(JSON.stringify({ 'result': 'error', 'error': e }))
-      .setMimeType(ContentService.MimeType.JSON);
+  catch(error) {
+    // Return error message
+    return HtmlService.createHtmlOutput(
+      `<html>
+        <head>
+          <style>
+            body { font-family: Arial, sans-serif; text-align: center; padding: 40px; }
+            .error { color: #c53030; }
+          </style>
+        </head>
+        <body>
+          <h2 class="error">Error submitting form</h2>
+          <p>There was a problem processing your submission.</p>
+          <p>Please try again or contact us directly.</p>
+          <p>Error: ${error.toString()}</p>
+        </body>
+      </html>`
+    );
   }
   
   finally {
@@ -121,3 +156,10 @@ If the form isn't working:
 2. Verify the Web App URL is correct in your contact.js file
 3. Make sure the script is deployed as a web app with appropriate permissions
 4. Confirm the header names in the Google Sheet match the field names in your form
+5. **CORS Issues**: If you're getting CORS errors when testing locally:
+   - Make sure you're using the updated Google Apps Script code that supports iframe submission
+   - The form uses an iframe approach to bypass CORS restrictions when submitting from a local file
+   - When deployed to a real web server, CORS issues should not occur
+6. **Redeploying**: If you make changes to the Apps Script code:
+   - Click Deploy > New deployment (don't update existing deployments)
+   - This will give you a new Web App URL that you'll need to update in contact.js
