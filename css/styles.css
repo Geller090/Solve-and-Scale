@@ -127,6 +127,11 @@ nav {
     align-items: center;
 }
 
+/* Footer logo color override */
+footer .logo {
+    color: white;
+}
+
 .logo::before {
     content: '';
     display: inline-block;
@@ -365,6 +370,7 @@ footer {
     min-width: 250px;
     margin-bottom: 2rem;
 }
+
 
 .footer-brand p {
     margin-top: 0.5rem;
