@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Solve and Scale</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">SOLVE AND SCALE</div>
+            <div class="nav-links">
+                <a href="index.html#services">Services</a>
+                <a href="index.html#about">About</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="contact-hero">
+        <div class="container">
+            <h1>GET IN TOUCH</h1>
+            <p>Ready to solve problems and scale your business? Let's talk.</p>
+        </div>
+    </section>
+
+    <section id="contact-form" class="contact-form">
+        <div class="container">
+            <div class="form-container">
+                <h2>CONTACT US</h2>
+                <p>Fill out the form below and we'll get back to you within 24 hours.</p>
+                
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name*</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="business">Business Name*</label>
+                        <input type="text" id="business" name="business" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address*</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message*</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <div class="form-submit">
+                        <button type="submit" class="btn primary" id="submitButton">Submit</button>
+                        <div id="loading" class="loading-spinner" style="display: none;"></div>
+                    </div>
+                    
+                    <div id="formStatus" class="form-status"></div>
+                </form>
+            </div>
+            
+            <div class="contact-info">
+                <h3>SOLVE AND SCALE</h3>
+                <p>Based in Point Loma, San Diego</p>
+                <p>We help businesses remove friction and grow faster through strategy, systems, and execution.</p>
+                
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <h4>EMAIL</h4>
+                        <p><a href="mailto:hello@solveandscale.com">hello@solveandscale.com</a></p>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <h4>PHONE</h4>
+                        <p><a href="tel:+18585551234">(858) 555-1234</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo">SOLVE AND SCALE</div>
+                <p>Operational Brains + Marketing Firepower</p>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>ABOUT</h4>
+                    <ul>
+                        <li><a href="index.html#team">Team</a></li>
+                        <li><a href="index.html#history">History</a></li>
+                        <li><a href="index.html#careers">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>PRIVACY</h4>
+                    <ul>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms and Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-contact">
+                <a href="contact.html" class="contact-link">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>
