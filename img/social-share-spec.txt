@@ -1,0 +1,32 @@
+# SOCIAL SHARE IMAGE SPECIFICATION
+
+## TECHNICAL DETAILS
+- Dimensions: 1200 × 630 pixels
+- Format: PNG with transparency
+- Primary Color: #FF6B00 (Orange)
+- Font: Montserrat (Bold for logo, Medium for tagline)
+- Background: White or very light gradient
+
+## DESIGN OPTION 1: CENTERED LAYOUT
+A clean, centered design with elements stacked vertically:
+- Orange upward trending arrow at the top center (similar to favicon)
+- "SOLVE AND SCALE" text logo below the arrow (large, bold)
+- "Strategy, Systems, and Marketing" tagline below the logo
+
+## DESIGN OPTION 2: GRID LAYOUT
+A more dynamic layout with elements arranged horizontally:
+- Orange arrow on the left side (40% of width)
+- Text block on the right (60% of width):
+  * "SOLVE AND SCALE" text logo (large, bold)
+  * "Strategy, Systems, and Marketing" tagline
+  * Optional additional line: "Helping businesses get unstuck — and grow with clarity."
+
+## DESIGN NOTES
+- The arrow should have a slight 3D effect with shadow on one side
+- Add subtle shadow behind text for better visibility
+- Use high contrast for readability when shared
+- Keep critical elements away from edges (60-80px safe zone)
+- Test how it looks at both large and thumbnail sizes
+
+## FILE LOCATION
+Save the final image as: img/social-share.png

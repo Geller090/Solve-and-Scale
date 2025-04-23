@@ -1,0 +1,7 @@
+Social share image should be created with these specifications:
+- 1200×630px dimensions
+- Orange upward trending arrow from fabicon.png
+- SOLVE AND SCALE text logo
+- Tagline: Strategy, Systems, and Marketing
+- PNG format with transparent background
+- Place in img/social-share.png when done
